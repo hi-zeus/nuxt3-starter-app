@@ -9,8 +9,14 @@ export default defineNuxtConfig({
       link: [{ rel: 'icon', type: 'image/*', href: '/favicon.svg' }]
     }
   },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },  
+  css: ['@/assets/css/main.css'],
   modules: [
-    'nuxt-windicss',
     '@pinia/nuxt',
     'unplugin-icons/nuxt',
     '@vueuse/nuxt',
